@@ -110,6 +110,33 @@ module.exports = function(grunt) {
       }
     },
 
+    autoprefixer: {
+      options: {
+        browsers: ['last 2 versions', 'ie 9', 'android 2.3', 'android 4', 'opera 12']
+      },
+      core: {
+        src: '<%= meta.distPath %>css/<%= pkg.name %>.css'
+      },
+      android_theme: {
+        options: {
+          browsers: ['last 2 versions', 'android 2.3', 'android 4', 'opera 12']
+        },
+        src: '<%= sass.android_theme.dest %>'
+      },
+      ios_theme: {
+        options: {
+          browsers: ['last 2 versions']
+        },
+        src: '<%= sass.ios_theme.dest %>'
+      },
+      docs: {
+        options: {
+          browsers: ['last 2 versions', 'ie 9', 'android 2.3', 'android 4', 'opera 12']
+        },
+        src: '<%= sass.docs.dest %>'
+      }
+    },
+
     cssmin: {
       options: {
         banner: '', // set to empty; see bellow
@@ -249,7 +276,7 @@ module.exports = function(grunt) {
   require('time-grunt')(grunt);
 
   // Default task(s).
-  grunt.registerTask('dist-css', ['sass', 'csscomb', 'cssmin']);
+  grunt.registerTask('dist-css', ['sass', 'autoprefixer', 'csscomb', 'cssmin']);
   grunt.registerTask('dist-js', ['concat', 'uglify']);
   grunt.registerTask('dist', ['clean', 'dist-css', 'dist-js', 'copy', 'build-ratchicons-data']);
   grunt.registerTask('validate-html', ['jekyll', 'validation']);
