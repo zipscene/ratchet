@@ -75,6 +75,21 @@ module.exports = function(grunt) {
       }
     },
 
+    usebanner: {
+      dist: {
+        options: {
+          position: 'top',
+          banner: '<%= banner %>'
+        },
+        files: {
+          src: [
+            'dist/css/*.css',
+            'docs/assets/css/docs.css'
+          ]
+        }
+      }
+    },
+
     csscomb: {
       options: {
         config: 'sass/.csscomb.json'
@@ -111,8 +126,7 @@ module.exports = function(grunt) {
 
     cssmin: {
       options: {
-        banner: '', // set to empty; see bellow
-        keepSpecialComments: '*', // set to '*' because we already add the banner in sass
+        keepSpecialComments: '*', // set to '*' because we already add the banner with 'grunt-banner'
         noAdvanced: true // disable advanced optimizations since it causes many issues
       },
       ratchet: {
@@ -249,7 +263,7 @@ module.exports = function(grunt) {
   require('time-grunt')(grunt);
 
   // Default task(s).
-  grunt.registerTask('dist-css', ['sass', 'csscomb', 'cssmin']);
+  grunt.registerTask('dist-css', ['sass', 'usebanner', 'csscomb', 'cssmin']);
   grunt.registerTask('dist-js', ['concat', 'uglify']);
   grunt.registerTask('dist', ['clean', 'dist-css', 'dist-js', 'copy', 'build-ratchicons-data']);
   grunt.registerTask('validate-html', ['jekyll', 'validation']);
