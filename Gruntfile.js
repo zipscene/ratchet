@@ -154,12 +154,20 @@ module.exports = function(grunt) {
       }
     },
 
+    connect: {
+      server: {
+        options: {
+          base: '_site/',
+          port: 4000
+        }
+      }
+    },
+
     watch: {
-      scripts: {
-        files: [
-          '<%= meta.srcPath %>/**/*.scss'
-        ],
-        tasks: ['sass']
+      files: ['docs/**/*', 'fonts/**/*', 'sass/**/*', 'Gruntfile.js'],
+      tasks: 'dev',
+      options: {
+        livereload: true
       }
     },
 
@@ -251,11 +259,12 @@ module.exports = function(grunt) {
   // Default task(s).
   grunt.registerTask('dist-css', ['sass', 'csscomb', 'cssmin']);
   grunt.registerTask('dist-js', ['concat', 'uglify']);
-  grunt.registerTask('dist', ['clean', 'dist-css', 'dist-js', 'copy', 'build-ratchicons-data']);
+  grunt.registerTask('dist', ['dist-css', 'dist-js', 'copy', 'build-ratchicons-data']);
   grunt.registerTask('validate-html', ['jekyll', 'validation']);
-  grunt.registerTask('build', ['dist']);
-  grunt.registerTask('default', ['dist']);
-  grunt.registerTask('test', ['dist', 'csslint', 'jshint', 'jscs', 'validate-html']);
+  grunt.registerTask('build', ['clean', 'dist']);
+  grunt.registerTask('dev', ['jekyll', 'dist', 'connect', 'watch']);
+  grunt.registerTask('default', ['dev']);
+  grunt.registerTask('test', ['clean', 'dist', 'csslint', 'jshint', 'jscs', 'validate-html']);
 
   grunt.registerTask('build-ratchicons-data', generateRatchiconsData);
 
