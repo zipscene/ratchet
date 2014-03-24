@@ -111,9 +111,7 @@
       return;
     }
 
-    setSlideNumber(
-      (+new Date()) - startTime < 1000 && Math.abs(deltaX) > 15 ? (deltaX < 0 ? -1 : 1) : 0
-    );
+    setSlideNumber((+new Date()) - startTime < 1000 && Math.abs(deltaX) > 15 ? (deltaX < 0 ? -1 : 1) : 0);
 
     offsetX = slideNumber * sliderWidth;
 
@@ -121,7 +119,9 @@
     slider.style.webkitTransform = 'translate3d(' + offsetX + 'px,0,0)';
 
     e = new CustomEvent('slide', {
-      detail: { slideNumber: Math.abs(slideNumber) },
+      detail: {
+        slideNumber: Math.abs(slideNumber)
+      },
       bubbles: true,
       cancelable: true
     });

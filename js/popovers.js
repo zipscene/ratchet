@@ -52,8 +52,7 @@
 
     try {
       popover = document.querySelector(anchor.hash);
-    }
-    catch (error) {
+    } catch (error) {
       popover = null;
     }
 
@@ -76,7 +75,7 @@
     }
 
     popover.style.display = 'block';
-    popover.offsetHeight;   // jshint ignore:line
+    popover.offsetHeight; // jshint ignore:line
     popover.classList.add('visible');
 
     popover.parentNode.appendChild(backdrop);
