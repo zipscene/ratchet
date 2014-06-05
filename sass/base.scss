@@ -11,11 +11,11 @@
 
 // We fix position the body and scroll `.content`.
 body {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+  // position: fixed;
+  // top: 0;
+  // right: 0;
+  // bottom: 0;
+  // left: 0;
   font-family: $font-family-default;
   font-size: $font-size-default;
   line-height: $line-height-default;
@@ -36,12 +36,12 @@ a {
 
 // Wrapper to be used around all content not in .bar-title and .bar-tab
 .content {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  overflow: auto;
+  // position: absolute;
+  // top: 0;
+  // right: 0;
+  // bottom: 0;
+  // left: 0;
+  // overflow: auto;
   background-color: #fff;
   -webkit-overflow-scrolling: touch;
 }
