@@ -100,6 +100,10 @@
       right: 35px;
     }
   }
+
+  > .navigate-left:not(.btn) {
+    padding-left: 35px;
+  }
 }
 
 // If the table view is the first component, give it extra margin on top.

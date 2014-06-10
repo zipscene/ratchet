@@ -106,10 +106,12 @@ select {
 }
 
 // Actual inputs float to right of labels and also have a set percentage
-.input-row input {
-  float: right;
-  width: 65%;
-  padding-left: 0;
-  margin-bottom: 0;
-  border: 0;
+.input-row {
+    input, select {
+    float: right;
+    width: 65%;
+    padding-left: 0;
+    margin-bottom: 0;
+    border: 0;
+  }
 }

@@ -21,3 +21,13 @@ p {
   font-size: 14px;
   color: #777;
 }
+
+.text-positive {
+	color: $positive-color;
+}
+.text-negative {
+	color: $negative-color;
+}
+.text-primary {
+	color: $primary-color;
+}
