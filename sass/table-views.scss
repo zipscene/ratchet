@@ -5,11 +5,11 @@
 .table-view {
   padding-left: 0;
   margin-top: 0;
-  margin-bottom: 15px;
+  margin-bottom: 0;
   list-style: none; // Remove usual bullet styles from table view
   background-color: #fff;
   border-top: $border-default;
-  border-bottom: $border-default;
+  //border-bottom: $border-default;
 }
 
 // Pad each table view item and add dividers
@@ -44,13 +44,7 @@ div.table-view {
 }
 
 // Remove the border from the last table view item
-li, label {
-  &.table-view-cell {
-    &:last-of-type {
-      //border-bottom: 0;
-    }
-  }
-}
+
 
 // Table view dividers
 // --------------------------------------------------

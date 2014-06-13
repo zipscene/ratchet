@@ -32,6 +32,6 @@
   }
 }
 // Remove the bottom border from last table cell
-.card .table-view-cell:last-child {
+.card .table-view-cell:last-of-type {
   border-bottom: 0;
 }
