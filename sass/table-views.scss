@@ -19,10 +19,7 @@
   overflow: hidden;
   border-bottom: $border-default;
 
-  // Remove the border from the last table view item
-  &:last-of-type {
-    border-bottom: 0;
-  }
+  
   // If it's a table view of links, make sure the child <a> takes up full table view item tap area (want to avoid selecting child buttons though)
   > a:not(.btn) {
     position: relative;
@@ -41,6 +38,19 @@
   }
 }
 
+// Remove bottom border from div based table-views
+div.table-view {
+  border-bottom: 0;
+}
+
+// Remove the border from the last table view item
+li, label {
+  &.table-view-cell {
+    &:last-of-type {
+      //border-bottom: 0;
+    }
+  }
+}
 
 // Table view dividers
 // --------------------------------------------------
