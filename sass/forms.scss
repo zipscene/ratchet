@@ -61,6 +61,7 @@ textarea {
 
 // Style select button to look like part of the Ratchet's style
 select {
+  -webkit-appearance: menulist;
   //height: auto;
   //font-size: 14px;
   //background-color: #f8f8f8;
@@ -74,16 +75,15 @@ select {
 // Remove spacing, borders, shadows and rounding since it all belongs on the .input-group not the input
 .input-group {
   background-color: #fff;
-}
-.input-group input,
-.input-group textarea {
-  margin-bottom: 0;
-  background-color: transparent;
-  border-top: 0;
-  border-right: 0;
-  border-left: 0;
-  border-radius: 0;
-  @include box-shadow(none);
+  input, textarea, select {
+    margin-bottom: 0;
+    background-color: transparent;
+    border-top: 0;
+    border-right: 0;
+    border-left: 0;
+    border-radius: 0;
+    @include box-shadow(none);
+  }
 }
 
 // Input groups with labels
