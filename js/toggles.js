@@ -47,41 +47,41 @@
   });
 
   window.addEventListener('touchmove', function (e) {
-    e = e.originalEvent || e;
+    // e = e.originalEvent || e;
 
-    if (e.touches.length > 1) {
-      return; // Exit if a pinch
-    }
+    // if (e.touches.length > 1) {
+    //   return; // Exit if a pinch
+    // }
 
-    if (!toggle) {
-      return;
-    }
+    // if (!toggle) {
+    //   return;
+    // }
 
-    var handle      = toggle.querySelector('.toggle-handle');
-    var current     = e.touches[0];
-    var toggleWidth = toggle.clientWidth;
-    var handleWidth = handle.clientWidth;
-    var offset      = toggleWidth - handleWidth;
+    // var handle      = toggle.querySelector('.toggle-handle');
+    // var current     = e.touches[0];
+    // var toggleWidth = toggle.clientWidth;
+    // var handleWidth = handle.clientWidth;
+    // var offset      = toggleWidth - handleWidth;
 
-    touchMove = true;
-    distanceX = current.pageX - start.pageX;
+    // touchMove = true;
+    // distanceX = current.pageX - start.pageX;
 
-    if (Math.abs(distanceX) < Math.abs(current.pageY - start.pageY)) {
-      return;
-    }
+    // if (Math.abs(distanceX) < Math.abs(current.pageY - start.pageY)) {
+    //   return;
+    // }
 
-    e.preventDefault();
+    // e.preventDefault();
 
-    if (distanceX < 0) {
-      return (handle.style.webkitTransform = 'translate3d(0,0,0)');
-    }
-    if (distanceX > offset) {
-      return (handle.style.webkitTransform = 'translate3d(' + offset + 'px,0,0)');
-    }
+    // if (distanceX < 0) {
+    //   return (handle.style.webkitTransform = 'translate3d(0,0,0)');
+    // }
+    // if (distanceX > offset) {
+    //   return (handle.style.webkitTransform = 'translate3d(' + offset + 'px,0,0)');
+    // }
 
-    handle.style.webkitTransform = 'translate3d(' + distanceX + 'px,0,0)';
+    // handle.style.webkitTransform = 'translate3d(' + distanceX + 'px,0,0)';
 
-    toggle.classList[(distanceX > (toggleWidth / 2 - handleWidth / 2)) ? 'add' : 'remove']('active');
+    // toggle.classList[(distanceX > (toggleWidth / 2 - handleWidth / 2)) ? 'add' : 'remove']('active');
   });
 
   window.addEventListener('touchend', function (e) {
