@@ -80,8 +80,8 @@ a {
 
 // Utility classes
 .content-padded {
-  margin: 0 $bar-side-spacing;
-  padding: $bar-side-spacing 0;
+  margin: 0 $bar-side-spacing $bar-side-spacing $bar-side-spacing;
+  padding-top: $bar-side-spacing;
 }
 .pull-left {
   float: left;
