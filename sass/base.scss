@@ -55,7 +55,8 @@ a {
 // Pad top/bottom of content so it doesn't hide behind bars.
 // Note: For these to work, content must come after both bars in the markup
 .bar-nav ~ .content {
-  top: $bar-base-height;
+  //top: $bar-base-height;
+  margin-top: $bar-base-height;
 }
 .bar-header-secondary ~ .content {
   padding-top: ($bar-base-height*2);
@@ -79,7 +80,8 @@ a {
 
 // Utility classes
 .content-padded {
-  margin: $bar-side-spacing;
+  margin: 0 $bar-side-spacing;
+  padding: $bar-side-spacing 0;
 }
 .pull-left {
   float: left;
