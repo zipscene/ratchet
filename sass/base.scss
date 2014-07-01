@@ -20,7 +20,7 @@ body {
   font-size: $font-size-default;
   line-height: $line-height-default;
   color: #000;
-  background-color: #fff;
+  background-color: $page-background;
 }
 
 // Universal link styling
