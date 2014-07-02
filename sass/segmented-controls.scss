@@ -27,7 +27,7 @@
     border-left: 1px solid #ccc;
 
     // Remove border-left and shadow from first section
-    &:first-child {
+    &:first-of-type {
       border-left-width: 0;
     }
 

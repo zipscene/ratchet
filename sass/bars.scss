@@ -58,16 +58,20 @@
 // We position the absolutely to make sure the title is always centered
 .title {
   position: absolute;
+  left: 50%;
   display: block;
-  width: 100%;
+  width: 50%;
   padding: 0;
-  margin: 0 (-$bar-side-spacing);
+  // margin: 0 (-$bar-side-spacing);
   font-size: $font-size-default;
   font-weight: $font-weight;
   line-height: $bar-base-height;
   color: #000;
   text-align: center;
+  text-overflow: ellipsis;
   white-space: nowrap;
+  overflow: hidden;
+  @include transform(translate3d(-50%, 0, 0));
 }
 // Retain specified title color
 .title a {
