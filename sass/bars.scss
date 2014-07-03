@@ -62,6 +62,7 @@
   display: block;
   width: 50%;
   padding: 0;
+  z-index: 5;
   // margin: 0 (-$bar-side-spacing);
   font-size: $font-size-default;
   font-weight: $font-weight;
@@ -72,6 +73,11 @@
   white-space: nowrap;
   overflow: hidden;
   @include transform(translate3d(-50%, 0, 0));
+
+  img {
+    max-height: ($bar-base-height * 0.9);
+    width: auto;
+  }
 }
 // Retain specified title color
 .title a {
