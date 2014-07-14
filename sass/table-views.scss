@@ -9,7 +9,7 @@
   list-style: none; // Remove usual bullet styles from table view
   background-color: #fff;
   border-top: $border-default;
-  //border-bottom: $border-default;
+  border-bottom: $border-default;
 }
 
 // Pad each table view item and add dividers
@@ -42,9 +42,6 @@
 div.table-view {
   border-bottom: 0;
 }
-
-// Remove the border from the last table view item
-
 
 // Table view dividers
 // --------------------------------------------------
