@@ -7,7 +7,7 @@
   margin-top: 0;
   margin-bottom: 0;
   list-style: none; // Remove usual bullet styles from table view
-  background-color: #fff;
+  background-color: $white;
   border-top: $border-default;
   border-bottom: $border-default;
 }
@@ -30,7 +30,7 @@
     color: inherit;
 
     &:active {
-      background-color: #eee;
+      background-color: $gray-lighter;
     }
   }
   p {
@@ -52,11 +52,13 @@ div.table-view {
   padding-left: 15px;
   margin-top: -1px; // Hides the border of the previous list item
   margin-left: 0;
-  font-weight: $font-weight;
-  color: #999;
-  background-color: #fafafa;
+  font-size: 15px;
+  font-weight: bold;
+  color: $gray;
+  background-color: $divider-background-color;
   border-top: $border-default;
-  border-bottom: $border-default;
+  text-transform: uppercase; // KVH: 7-29-2014
+  // border-bottom: $border-default;
 }
 
 
@@ -68,6 +70,8 @@ div.table-view {
   overflow: hidden;
 }
 .table-view .media-object {
+  margin-top: 4px;
+
   &.pull-left {
     margin-right: 10px;
   }
@@ -81,12 +85,12 @@ div.table-view {
 // --------------------------------------------------
 .table-view-cell,
 .table-view-cell > a {
-  > .btn,
+  > .btn-badge,
   > .badge,
   > .toggle {
     position: absolute;
     top: 50%;
-    right: 15px;
+    right: 0; // KVH - was 15px
     @include transform(translateY(-50%));
   }
 

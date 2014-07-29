@@ -12,7 +12,7 @@ select {
 }
 
 // Stretch inputs/textareas to full width and add height to maintain a consistent baseline
-select,
+// select,
 textarea,
 input[type="text"],
 input[type="search"],
@@ -35,7 +35,8 @@ input[type="color"] {
   margin-bottom: 15px;
   line-height: $line-height-default;
   background-color: #fff;
-  border: $border-default;
+  border: $border-primary;
+  color: $primary-color; // KVH: 7-29-14
   border-radius: 3px;
   outline: none;
 }
@@ -75,14 +76,22 @@ select {
 // Remove spacing, borders, shadows and rounding since it all belongs on the .input-group not the input
 .input-group {
   background-color: #fff;
+  border-top: $border-default;
+  
   input, textarea, select {
     margin-bottom: 0;
+    border-color: $border-color;
+    color: $gray;
     background-color: transparent;
     border-top: 0;
     border-right: 0;
     border-left: 0;
     border-radius: 0;
     @include box-shadow(none);
+  }
+
+  .table-view-divider + & {
+    border-top: 0;
   }
 }
 
