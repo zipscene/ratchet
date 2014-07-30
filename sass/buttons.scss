@@ -21,7 +21,7 @@
   outline: none;
 
   // Active & filled button styles
-  // &:active,
+  &:active,
   &.active {
     color: inherit; // Overriding the gloabl style for all anchors.
     background-color: #ccc;
@@ -44,7 +44,7 @@
   background-color: $primary-color;
   border: 1px solid $primary-color;
 
-  // &:active,
+  &:active,
   &.active {
     color: #fff;
     background-color: darken($primary-color, 10%);
@@ -58,7 +58,7 @@
   background-color: $positive-color;
   border: 1px solid $positive-color;
 
-  // &:active,
+  &:active,
   &.active {
     color: #fff;
     background-color: darken($positive-color, 10%);
@@ -94,11 +94,11 @@
     color: $negative-color;
   }
   // Active states
-  // &.btn-primary:active,
-  // &.btn-positive:active,
-  // &.btn-negative:active {
-  //   color: #fff;
-  // }
+  &.btn-primary:active,
+  &.btn-positive:active,
+  &.btn-negative:active {
+    color: #fff;
+  }
 }
 
 // Link button (Buttons that look like links)
