@@ -73,7 +73,7 @@ $bar-background-color: #f8f8f8;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
-  @include transform(translate3d(-50%, 0, 0));
+  @include transform(translateX(-50%));
 
   img {
     max-height: ($bar-base-height * 0.9);
@@ -244,6 +244,10 @@ $bar-background-color: #f8f8f8;
 
 // Position the control correctly inside a bar.
 .bar .segmented-control {
-  top: 7px;
+  width: 60%;
+  top: 50%;
   margin: 0 auto;
+  position: absolute;
+  left: 50%;
+  @include transform(translate(-50%,-50%));
 }

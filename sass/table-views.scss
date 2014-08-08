@@ -9,7 +9,7 @@
   list-style: none; // Remove usual bullet styles from table view
   background-color: $white;
   border-top: $border-default;
-  border-bottom: $border-default;
+  // border-bottom: $border-default;
 }
 
 // Pad each table view item and add dividers
@@ -47,6 +47,7 @@ div.table-view {
 // --------------------------------------------------
 
 .table-view-divider {
+  position: relative;
   padding-top: 6px;
   padding-bottom: 6px;
   padding-left: 15px;
@@ -59,6 +60,12 @@ div.table-view {
   border-top: $border-default;
   text-transform: uppercase; // KVH: 7-29-2014
   // border-bottom: $border-default;
+
+  &:empty {
+    border-top: 1px solid $white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
 }
 
 
