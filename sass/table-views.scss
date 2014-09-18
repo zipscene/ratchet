@@ -19,7 +19,7 @@
   overflow: hidden;
   border-bottom: $border-default;
 
-  
+
   // If it's a table view of links, make sure the child <a> takes up full table view item tap area (want to avoid selecting child buttons though)
   > a:not(.btn) {
     position: relative;
@@ -57,7 +57,7 @@ div.table-view {
   font-weight: bold;
   color: $gray;
   background-color: $divider-background-color;
-  border-top: $border-default;
+  border-top: $white;
   text-transform: uppercase; // KVH: 7-29-2014
   // border-bottom: $border-default;
 

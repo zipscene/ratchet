@@ -12,7 +12,7 @@ $bar-background-color: #f8f8f8;
   padding-right: $bar-side-spacing;
   padding-left: $bar-side-spacing;
   background-color: $bar-background-color;
-  border-bottom: $border-default;
+  // border-bottom: $border-default;
   -webkit-backface-visibility: hidden; // Make sure the bar is visible when a modal animates in.
           backface-visibility: hidden;
 }
